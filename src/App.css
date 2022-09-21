@@ -32,7 +32,291 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* custom csss */
+.navbar-design {
+  background: rgb(44, 42, 42);
+  height: 60px;
+}
+
+.text-design {
+  color: white;
+}
+
+.icon-design {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-design1 {
+  margin-right: 10rem;
+}
+
+.icon-design2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-design .icon-design1 {
+  position: absolute;
+}
+
+.btn {
+  border: none;
+  border-radius: 2rem;
+  background-color: red;
+  color: white;
+}
+
+.products-img {
+  width: 150px;
+  height: 130px;
+  margin: 2rem auto;
+  box-sizing: border-box;
+}
+
+
+.card-design {
+  box-shadow: 1px 1px 1px 1px rgb(160, 160, 154);
+  border-radius: 0.5rem;
+  width: 250px;
+  height: 350px;
+  margin: 2rem 2rem;
+}
+
+.card-design1 {
+  background-color: aliceblue;
+}
+
+.product-design {
+  border: 1px solid rgb(117, 115, 115);
+}
+
+.action-design {
+  margin-top: 3rem;
+  border: 1px solid black;
+  width: 480px;
+  margin-left: auto;
+  margin-right: 12rem;
+  margin-bottom: 5rem;
+  background-color: #282c34;
+  transform: scale(.8);
+  transition: all 0.3s ease-in-out;
+}
+
+.main_content :hover {
+  /* background-color: #aeb0b6; */
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.action-design1 {
+  margin-top: 3rem;
+  border: 1px solid black;
+  width: 480px;
+  margin-left: auto;
+  margin-right: 15rem;
+  margin-bottom: 5rem;
+}
+
+.action-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.color-box1 {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+}
+
+.action-img :hover {
+  cursor: pointer;
+  /* background-color: #546d63; */
+}
+
+.action-img1 :hover {
+  cursor: pointer;
+  background-color: #61dafb;
+}
+
+.hamburg {
+  font-size: 1rem;
+  border: none;
+  display: none;
+}
+
+@media only screen and (max-width:990px) {
+  .icon-design {
+    width: 200px;
+    margin: auto;
+    z-index: -1;
+    bottom: 3rem;
+    display: none;
+  }
+}
+
+@media only screen and (max-width:990px) {
+  .hamburg {
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+    color: white;
+    display: block;
+  }
+
+  .icon-design {
+    width: 200px;
+    margin: auto;
+    z-index: 1;
+    bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width : 455px) {
+  .main-content {
+    /* height: 300px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+ .navbar-design{
+  height: 159px;
+ }
+.icon-design2 {
+  margin-top: 5rem;
+}
+.btn{
+  margin-top: 5rem;
+}
+}
+
+/* ................................................................navbar */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.header {
+  /* border: 2px solid red; */
+  border-radius: 0.5rem;
+  background-color: black;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.header .hamburg-1 {
+  display: none;
+}
+
+.logo h3:hover {
+  cursor: pointer;
+  color: aquamarine;
+}
+
+.logo h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.header ul li {
+  list-style: none;
+
+}
+
+.header ul li a {
+  text-decoration: none;
+  margin: 1rem;
+  font-size: 1.6rem;
+  padding: 1rem;
+  color: white;
+}
+
+.header ul li a:hover {
+  /* cursor: pointer; */
+  color: aqua;
+}
+
+/* .header .mobile-version{
+  display: none;
+} */
+
+.header ul li a.hamburg {
+  display: none;
+}
+
+.mobile-version {
+  /* border: 2px solid red; */
+  background-color: black;
+}
+
+.mobile-version ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-version ul li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.mobile-version ul li a.hamburg {
+  display: none;
+}
+
+.mobile-version .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-version .head .hamburg-1 {
+  color: white;
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+
+.mobile-version .head .logo {
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 620px) {
+  .header ul li a {
+    display: none;
+  }
+
+  .header ul li a.hamburg {
+    display: block;
+    color: white;
+  }
+
 }

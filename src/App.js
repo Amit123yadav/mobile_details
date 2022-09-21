@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import ProductsList from './components/ProductsList';
+import { BrowserRouter , Route, Routes  } from 'react-router-dom'
+import ProductsDetials from './components/ProductsDetials';
+import Header from './components/Header';
+import NavBar from './NavBar';
 
 function App() {
+  const [searchShow, setSearchShow] = useState(true)
+  const [counts , setCount]  = useState()
+  const [searchTerm, setSearchTerm] = useState('')
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <NavBar /> */}
+      <BrowserRouter>
+      <Header searchShow={searchShow}  counts={counts} setCount={setCount} setSearchTerm={setSearchTerm}/>
+      <Routes>
+        <Route path='/' element={<ProductsList  setSearchShow={setSearchShow} setCount={setCount}  searchTerm={searchTerm}/>} />
+        <Route path='/products/:productId' element={<ProductsDetials setSearchShow={setSearchShow} setCount={setCount} />} />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
